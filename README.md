@@ -1,21 +1,22 @@
 String Blade Compiler
 =======================
-Render Blade templates from string value.
+Blade is a extremly simple, yet powerful templating engine provided with Laravel. Unfortunately, the "out of the box," he can only work with files on the hard drive, while it may be necessary to compile template of the variable. This package allow for a generic array of the required fields to generates and return a compiled view from a blade-syntax template.
 
-This is a fork from https://github.com/Flynsarmy/laravel-db-blade-compiler which uses Elequent model to pass in a template.
+This repository is a fork of the https://github.com/TerrePorter/StringBladeCompiler which in turn was formed from https://github.com/Flynsarmy/laravel-db-blade-compiler which uses Eloquent model to pass in a template.
 
-I have reworked it to allow for a generic array of the required fields to generates and return a compiled view from a blade-syntax template.
+Author of the original laravel-db-blade-compiler - Flyn San (flynsarmy@gmail.com)
+Author of the StringBladeCompiler - Terre Porter (tporter@webpage-builders.com)
+
+This package was created to import to the site packagist.org and allow installation through Composer (https://getcomposer.org/).
 
 Installation
 =======================
 
-(I'm unsure how to move the code from laravel 4 workbench to vendor)
+Require this package in your composer.json and run composer update (or run composer require sngrl/string-blade-compiler:1.*  directly):
+"sngrl/string-blade-compiler": "1.*"
 
-My current path is app\workbench\wpb\string-blade-compiler
-
-Add the ServiceProvider to the providers array in app/config/app.php
-
-'Wpb\StringBladeCompiler\StringBladeCompilerServiceProvider',
+After updating composer, add the ServiceProvider to the providers array in app/config/app.php
+'sngrl\StringBladeCompiler\StringBladeCompilerServiceProvider',
 
 There is no need to add a Facade to the aliases array in the same file as the service provider, this is being included  automatically in the ServiceProvider.
 
