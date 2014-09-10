@@ -1,12 +1,12 @@
 {
-    "name": "wpb/string-blade-compiler",
-    "description": "Render Blade templates from string",
-    "keywords": ["laravel", "blade", "compiler"],
+    "name": "sngrl/string-blade-compiler",
+    "description": "Render Blade templates from string variable",
+    "keywords": ["laravel", "blade", "compiler", "string", "variable"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Terre Porter",
-            "email": "tporter@webpage-builders.com"
+            "name": "Sngrl",
+            "email": "sangrealrnd@gmail.com"
         }
     ],
     "require": {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Wpb\\StringBladeCompiler\\": "src/"
+            "sngrl\\StringBladeCompiler\\": "src/"
         }
     },
     "minimum-stability": "dev"

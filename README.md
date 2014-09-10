@@ -1,6 +1,6 @@
 String Blade Compiler
 =======================
-Blade is a extremly simple, yet powerful templating engine provided with Laravel. Unfortunately, the "out of the box," he can only work with files on the hard drive, while it may be necessary to compile template of the variable. This package allow for a generic array of the required fields to generates and return a compiled view from a blade-syntax template.
+Blade is a extremly simple, yet powerful templating engine provided with Laravel. Unfortunately, the "out of the box," he can only work with files on the hard drive, while it may be necessary to compile template of the string variable. This package allow for a generic array of the required fields to generates and return a compiled view from a blade-syntax template.
 
 This repository is a fork of the https://github.com/TerrePorter/StringBladeCompiler which in turn was formed from https://github.com/Flynsarmy/laravel-db-blade-compiler which uses Eloquent model to pass in a template.
 
