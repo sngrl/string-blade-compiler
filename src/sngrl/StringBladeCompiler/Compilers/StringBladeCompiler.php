@@ -1,4 +1,4 @@
-<?php namespace Wpb\StringBladeCompiler\Compilers;
+<?php namespace sngrl\StringBladeCompiler\Compilers;
 
 use Config;
 use Illuminate\View\Compilers\BladeCompiler;

@@ -1,4 +1,4 @@
-<?php namespace Wpb\StringBladeCompiler;
+<?php namespace sngrl\StringBladeCompiler;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,7 @@ class StringBladeCompilerServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('wpb/string-blade-compiler');
+		$this->package('sngrl/string-blade-compiler');
 	}
 
 	/**
@@ -28,7 +28,7 @@ class StringBladeCompilerServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bind('stringview', 'Wpb\StringBladeCompiler\StringView');
+		$this->app->bind('stringview', 'sngrl\StringBladeCompiler\StringView');
 
                 /*
                * This removes the need to add a facade in the config\app
@@ -36,7 +36,7 @@ class StringBladeCompilerServiceProvider extends ServiceProvider {
                 $this->app->booting(function()
                 {
                     $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-                    $loader->alias('StringView', 'Wpb\StringBladeCompiler\Facades\StringView');
+                    $loader->alias('StringView', 'sngrl\StringBladeCompiler\Facades\StringView');
                 });
 	}
 

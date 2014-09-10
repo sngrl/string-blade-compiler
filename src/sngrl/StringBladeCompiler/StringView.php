@@ -1,4 +1,4 @@
-<?php namespace Wpb\StringBladeCompiler;
+<?php namespace sngrl\StringBladeCompiler;
 
 use App, View, Closure, Config, ArrayAccess;
 use Illuminate\Support\MessageBag;
@@ -6,7 +6,7 @@ use Illuminate\View\Engines\EngineInterface;
 use Illuminate\Support\Contracts\MessageProviderInterface;
 use Illuminate\Support\Contracts\ArrayableInterface as Arrayable;
 use Illuminate\Support\Contracts\RenderableInterface as Renderable;
-use Wpb\StringBladeCompiler\Compilers\StringBladeCompiler;
+use sngrl\StringBladeCompiler\Compilers\StringBladeCompiler;
 use Illuminate\View\Engines\CompilerEngine;
 
 
