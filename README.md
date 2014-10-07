@@ -13,9 +13,11 @@ Installation
 =======================
 
 Require this package in your composer.json and run composer update (or run composer require sngrl/string-blade-compiler:1.*  directly):
+
 "sngrl/string-blade-compiler": "1.*"
 
-After updating composer, add the ServiceProvider to the providers array in app/config/app.php
+After updating composer, add the ServiceProvider to the "providers" array in app/config/app.php:
+
 'sngrl\StringBladeCompiler\StringBladeCompilerServiceProvider',
 
 There is no need to add a Facade to the aliases array in the same file as the service provider, this is being included  automatically in the ServiceProvider.
@@ -27,18 +29,24 @@ This package offers a StringView facade with the same syntax as View but accepts
 
 ```php
 return StringView::make(
-                        array(
-                            // this actual blade template
-                            'template'  => '{{ $token1 }}',
-                            // this is the cache file key, converted to md5
-                            'cache_key' => 'my_unique_cache_key',
-                            // timestamp for when the template was last updated, 0 is always recompile
-                            'updated_at' => 1391973007
-                        ),
-                        array(
-                            'token1'=> 'token 1 value'
-                        )
-                );
+                array(
+                    // this actual blade template
+                    'template'  => '{{ $token1 }}',
+                    // this is the cache file key, converted to md5
+                    'cache_key' => 'my_unique_cache_key',
+                    // timestamp for when the template was last updated, 0 is always recompile
+                    'updated_at' => 1391973007
+                ),
+                array(
+                    'token1'=> 'token 1 value'
+                )
+        );
+```
+
+Force compile method:
+
+```php
+return StringView::force('{{ $token1 }}', array('token1'=> 'token 1 value'));
 ```
 
 License

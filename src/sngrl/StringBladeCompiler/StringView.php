@@ -21,6 +21,18 @@ class StringView extends \Illuminate\View\View implements ArrayAccess, Renderabl
 		$this->engine = new CompilerEngine($compiler);
 	}
 
+    public function force($view, $data = array(), $mergeData = array()) {
+        return $this->make(
+            array(
+                'template'   => $view,
+                'cache_key'  => sha1($view),
+                'updated_at' => time()
+            ),
+            $data,
+            $mergeData
+        )->render();
+    }
+
 	/**
 	 * Get a evaluated view contents for the given view.
 	 *
