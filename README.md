@@ -12,13 +12,29 @@ This package was created to import to the site packagist.org and allow installat
 Installation
 =======================
 
-Require this package in your composer.json and run composer update (or run composer require sngrl/string-blade-compiler:1.*  directly):
+Require this package in your composer.json and run in your console composer update command:
+ 
+```php
+	"require": {
+        /*** Some others packages ***/
+		"sngrl/string-blade-compiler": "dev-master",
+	},
+```
 
-"sngrl/string-blade-compiler": "1.*"
+Or just run this in console:
+
+```php
+composer require sngrl/string-blade-compiler:dev-master
+```
 
 After updating composer, add the ServiceProvider to the "providers" array in app/config/app.php:
 
-'sngrl\StringBladeCompiler\StringBladeCompilerServiceProvider',
+```php
+	'providers' => array(
+        /*** Some others providers ***/
+        'sngrl\StringBladeCompiler\StringBladeCompilerServiceProvider',
+    ),
+```
 
 There is no need to add a Facade to the aliases array in the same file as the service provider, this is being included  automatically in the ServiceProvider.
 
