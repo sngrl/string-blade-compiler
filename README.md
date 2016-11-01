@@ -30,10 +30,9 @@ composer require sngrl/string-blade-compiler:dev-master
 After updating composer, add the ServiceProvider to the "providers" array in app/config/app.php:
 
 ```php
-	'providers' => array(
-        /*** Some others providers ***/
-        'sngrl\StringBladeCompiler\StringBladeCompilerServiceProvider',
-    ),
+    'providers' => [
+		sngrl\StringBladeCompiler\StringBladeCompilerServiceProvider::class,
+	],
 ```
 
 There is no need to add a Facade to the aliases array in the same file as the service provider, this is being included  automatically in the ServiceProvider.
